@@ -12,9 +12,14 @@ public class DesvioSimples {
 		System.out.println("Por favor, digite a sua idade!");
 		idade = leitor.nextInt();
 		System.out.println("Deixe-me verificar sua idade...");
-		/*Aqui devemos criar uma solução para verificar a idade do usuário*/
-		
 		leitor.close();
+		
+		
+		//Abaixo temos um if SIMPLES, ou seja, ele vai avaliar se a condição idade>=12 é verdadeira. Se for verdadeira, o if fará um DESVIO e a linha com a mensagem será executada.
+		if (idade>=12) {
+			System.out.println("Ok, você tem idade para poder jogar");
+		}	
+		
 
 	}
 
