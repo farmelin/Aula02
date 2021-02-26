@@ -9,11 +9,20 @@ public class DesvioComposto {
 		
 		Scanner leitor = new Scanner(System.in);
 		double doacao, investimento, usoImediato;
+		investimento = 0; 
+		usoImediato = 0;
 		System.out.println("Por favor, digite o valor da doação recebida!");
 		doacao = leitor.nextDouble();
 	
 		/*Aqui devemos criar uma solução para realizar os cálculos adequados baseando-nos no valor da doação*/
-		
+		// o IF abaixo tem uma parte verdadeira e outra falsa. Caso o teste seja verdadeiro a primeira parte é executada. Caso contrário a segunda parte é executada.
+		if (doacao < 1000) {
+			investimento = doacao * 0.05;
+			usoImediato = doacao - investimento;
+		} else {
+			investimento = doacao * 0.15;
+			usoImediato = doacao - investimento;
+		}
 		
 		System.out.println("A doação de R$" + doacao + " implica em um investimento de R$" + investimento + ", restando R$" + usoImediato + " para uso imediato");
 		leitor.close();
